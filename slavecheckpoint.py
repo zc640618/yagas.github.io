@@ -16,14 +16,15 @@ from=消息中心<xxx@162.com>
 host=localhost
 """
 
-import mysql.connector
-from mysql.connector import errorcode
-import telnetlib
-import smtplib
-from email.mime.text import MIMEText
-import optparse
-from ConfigParser import ConfigParser
 import os,time,sys
+import mysql.connector
+import optparse
+import optparse
+from mysql.connector import errorcode
+from smtplib import SMTP_SSL, starttls
+from email.header import Header
+from email.mime.text import MIMEText
+from ConfigParser import ConfigParser
 
 class SlaveStatu:
     __instance__ = None
